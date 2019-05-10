@@ -1,6 +1,7 @@
 {
     "name": "vitaly-alexandrovich/yii2-json-behavior",
     "description": "json behavior",
+	"version": "0.1.0",
     "authors": [
         {
             "name": "Vitaly",
