@@ -8,7 +8,9 @@
         }
     ],
     "require": {},
-	"psr-0": {
-		"yii\behaviors\\": "src/"
-	}
+	"autoload": {
+        "psr-0": {
+            "yii\behaviors\\": "src/",
+        }
+    },
 }
