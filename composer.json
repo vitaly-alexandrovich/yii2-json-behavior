@@ -1,0 +1,14 @@
+{
+    "name": "vitaly-alexandrovich/yii2-json-behavior",
+    "description": "json behavior",
+    "authors": [
+        {
+            "name": "Vitaly",
+            "email": "personal.vitaly@gmail.com"
+        }
+    ],
+    "require": {},
+	"psr-0": {
+		"yii\behaviors\\": "src/"
+	}
+}
