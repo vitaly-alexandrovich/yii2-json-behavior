@@ -33,7 +33,7 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             // Указываем колонку с данными и модель для них
-            \yii\behaviors\JsonBehavior::bind('contacts', Contacts::class),
+            \yii\behaviors\JsonBehavior::bind('contacts', UserContacts::class),
         ];
     }
 }
