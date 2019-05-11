@@ -25,12 +25,12 @@ class JsonBehavior extends Behavior
 	public function events()
 	{
 		return [
-			BaseActiveRecord::EVENT_INIT => 'import',
-			BaseActiveRecord::EVENT_BEFORE_INSERT => 'export',
-			BaseActiveRecord::EVENT_BEFORE_UPDATE => 'export',
-			BaseActiveRecord::EVENT_AFTER_UPDATE => 'import',
-			BaseActiveRecord::EVENT_AFTER_FIND => 'import',
-			BaseActiveRecord::EVENT_AFTER_INSERT => 'import',
+			BaseActiveRecord::EVENT_INIT            => 'import',
+			BaseActiveRecord::EVENT_BEFORE_INSERT   => 'export',
+			BaseActiveRecord::EVENT_BEFORE_UPDATE   => 'export',
+			BaseActiveRecord::EVENT_AFTER_UPDATE    => 'import',
+			BaseActiveRecord::EVENT_AFTER_FIND      => 'import',
+			BaseActiveRecord::EVENT_AFTER_INSERT    => 'import',
 		];
 	}
 
@@ -114,7 +114,7 @@ class JsonBehavior extends Behavior
 		return [
 			'class'         => static::class,
 			'attributeName' => $attributeName,
-			'modelName'        => $modelName,
+			'modelName'     => $modelName,
 		];
 	}
 }
