@@ -48,7 +48,7 @@ class User extends ActiveRecord
     $user->contacts->skype;
 ```
 
-Так и менять их:
+И менять их:
 ```php
     $user = User::findOne(1);
 
