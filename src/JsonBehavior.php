@@ -17,7 +17,7 @@ use yii\db\BaseActiveRecord;
 class JsonBehavior extends Behavior
 {
 	public $attributeName;
-	public $mapClassName;
+	public $modelName;
 
 	/**
 	 * @return array
@@ -95,11 +95,26 @@ class JsonBehavior extends Behavior
 			$data = json_decode($data, true);
 		}
 
-		if (!empty($this->mapClassName)) {
-			$class = $this->mapClassName;
-			$data = new $class($data);
+		if (!empty($this->modelName)) {
+			$data = new ($this->modelName)($data);
 		}
 
 		$this->set($data);
+	}
+
+	/**
+	 * Bind model mapper to attribute
+	 *
+	 * @param $attributeName
+	 * @param $modelName
+	 * @return array
+	 */
+	public static function bind($attributeName, $modelName)
+	{
+		return [
+			'class'         => static::class,
+			'attributeName' => $attributeName,
+			'modelName'        => $modelName,
+		];
 	}
 }
