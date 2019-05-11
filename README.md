@@ -14,15 +14,15 @@
 # Использование
 ```php
 // Создаем модель для данных
-class UserContacts extends yii\base\Model
+class UserContacts extends \yii\base\Model
 {
-    $phone;
-    $email;
-    $skype;
+    public $phone;
+    public $email;
+    public $skype;
 }
 
 // В существующей ActiveRecord модели используем поведение JsonBehavior
-class User extends ActiveRecord
+class User extends \yii\db\ActiveRecord
 {
     public static function tableName()
     {
@@ -33,7 +33,7 @@ class User extends ActiveRecord
     {
         return [
             // Указываем колонку с данными и модель для них
-            JsonBehavior::bind('contacts', Contacts::class),
+            \yii\behaviors\JsonBehavior::bind('contacts', Contacts::class),
         ];
     }
 }
