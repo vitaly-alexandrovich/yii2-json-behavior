@@ -1,17 +1,20 @@
 {
-    "name": "vitaly-alexandrovich/yii2-json-behavior",
-    "description": "json behavior",
-	"version": "0.1.0",
-    "authors": [
-        {
-            "name": "Vitaly",
-            "email": "personal.vitaly@gmail.com"
-        }
-    ],
-    "require": {},
+	"name": "vitaly-alexandrovich/yii2-json-behavior",
+	"description": "json behavior",
+	"version": "0.2.0",
+	"authors": [
+		{
+			"name": "Vitaly",
+			"email": "personal.vitaly@gmail.com"
+		}
+	],
+	"require": {
+		"yiisoft/yii2": "~2.0.0",
+		"ext-json": "*"
+	},
 	"autoload": {
-        "psr-0": {
-            "yii\behaviors\\": "src/"
-        }
-    }
+		"psr-4": {
+			"yii\\behaviors\\": "src/"
+		}
+	}
 }
